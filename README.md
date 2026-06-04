@@ -11,5 +11,11 @@ docker-compose up -d
 
 # or docker build image
 docker build -t vlmcsd .
-docker run -idt -p 1688:1688 vlmcsd
+docker run -d --name vlmcsd -p 1688:1688 vlmcsd
+
+# show logs
+docker logs -f vlmcsd
+
+# foreground (directly prints logs to terminal)
+docker run --rm -p 1688:1688 vlmcsd
 ```
