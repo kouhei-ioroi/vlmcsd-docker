@@ -22,6 +22,8 @@ jobs:
       # 1. コードのチェックアウト
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          submodules: true
 
       # 2. Buildxのセットアップ（より高速で高度なビルドが可能になります）
       - name: Set up Docker Buildx
